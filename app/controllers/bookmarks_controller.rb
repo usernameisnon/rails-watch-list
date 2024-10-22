@@ -10,7 +10,7 @@ class BookmarksController < ApplicationController
     @bookmark.list = @list
     if @bookmark.save
       redirect_to list_path(@list)
-      # 404 error ? get the movies in the list
+      # 404 error  get the movies in the list
     else
       render :new, status: 422
     end
