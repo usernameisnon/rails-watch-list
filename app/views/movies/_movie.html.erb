@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= movie.title %> <%= movie.rating %></h5>
+    <p class="card-text"><%= movie.overview %></p>
+    <p>"<%= @bookmark.comment %></p>
+    <%# <a href="#" class="btn btn-primary">delete</a> %>
+    <%= link_to "Delete",
+    bookmark_path(@bookmark),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<%= @list.name %>
+
+<% @movies.each do |movie| %>
+  <% @bookmark = @bookmarks.find { |bookmark| bookmark.movie_id == movie.id }  %>
+  <%= render movie  %>
+<% end %>

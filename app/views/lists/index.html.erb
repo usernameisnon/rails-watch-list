@@ -1,0 +1,8 @@
+<h2>My Lists</h2>
+
+<p><% @lists.each do |list| %>
+     <%= list.name %>
+   <% end %>
+</p>
+
+<%= link_to "Create a movie list", new_list_path, class: "btn btn-primary"%>
